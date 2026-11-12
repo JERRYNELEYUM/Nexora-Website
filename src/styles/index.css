@@ -1,0 +1,7 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+body{@apply font-sans text-ink bg-white antialiased}
+h1,h2,h3{@apply text-navy tracking-tight}
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-sky focus-visible:ring-offset-2}
+.btn-p{@apply btn bg-sky text-white hover:bg-sky-dark}
+.btn-s{@apply btn border border-navy/20 text-navy hover:bg-mist}
+.card{@apply rounded-2xl border border-navy/10 bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg}
