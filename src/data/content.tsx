@@ -14,10 +14,27 @@ export const services:Service[]=[
 {slug:'support',icon:Wrench,title:'Technical Support & Maintenance',desc:'IT troubleshooting, hardware and software support, system upgrades and remote or on-site technical assistance.',problem:'Downtime and unresolved technical issues that interrupt operations.',benefit:'Dependable support that keeps your systems running.',industries:'All sectors'},
 {slug:'financial-consultancy',icon:Landmark,title:'Financial & Business Consultancy',desc:'Financial consultancy, management advisory, business reporting and operational efficiency consultancy.',problem:'Limited visibility into performance and operational inefficiencies.',benefit:'Practical advice and reporting to improve efficiency.',industries:'SMEs, Entrepreneurs, Corporate'},
 {slug:'travel',icon:Plane,title:'Travel Consultancy',desc:'Travel consultancy and related advisory services.',problem:'Uncertainty when planning travel and related arrangements.',benefit:'Clear, professional guidance for your travel needs.',industries:'Individuals, SMEs, Corporate'}]
+
 export const products=[
-{slug:'stay',name:'Nexora Stay',cat:'Hotel Management System',desc:'A hotel management application designed to simplify hotel operations, improve reservation management and streamline financial and administrative processes.',features:['Room and reservation management','Guest management','Payment tracking','Expense management','Employee management','Payroll management','Financial reporting','Operational management'],target:'Hotels and guest houses'},
-{slug:'pos',name:'Nexora POS',cat:'Point of Sale & Business Management',desc:'A business management application that helps businesses manage sales, inventory, employees and financial operations efficiently.',features:['Sales processing','Product management','Inventory tracking','Customer management','Employee management','Payroll processing','Expense management','Business reporting'],target:'Supermarkets, shops and retail businesses'},
-{slug:'inventory',name:'Nexora Inventory',cat:'Inventory Management System',desc:'A stock management solution for supermarkets, clinics and other businesses that need better control of their inventory.',features:['Stock monitoring','Product management','Stock movement tracking','Low-stock alerts','Product expiry monitoring','Sales analytics','Inventory reporting'],target:'Supermarkets, clinics and stock-holding businesses'}]
+{
+slug:'stay',
+name:'Nexora Stay',
+cat:'Hotel Management System',
+image:'/images/products/nexora-stay-dashboard.png',
+desc:'A hotel management application designed to simplify hotel operations, improve reservation management and streamline financial and administrative processes.',
+features:['Room and reservation management','Guest management','Payment tracking','Expense management','Employee management','Payroll management','Financial reporting','Operational management'],
+target:'Hotels and guest houses'
+},
+{
+slug:'pos',
+name:'Nexora POS',
+cat:'Point of Sale & Business Management',
+image:'/images/products/nexora-pos-dashboard.png',
+desc:'A business management application that helps businesses manage sales, inventory, employees and financial operations efficiently.',
+features:['Sales processing','Product management','Inventory tracking','Customer management','Employee management','Payroll processing','Expense management','Business reporting'],
+target:'Schools, supermarkets, shops and retail businesses'
+}
+]
 export const industries:{icon:LucideIcon;title:string;desc:string}[]=[
 {icon:Hotel,title:'Hospitality & Hotels',desc:'Reservations, billing and staff management handled in one place instead of paper and spreadsheets.'},
 {icon:ShoppingCart,title:'Supermarkets & Retail',desc:'Faster checkout, accurate stock counts and clear sales reporting.'},
