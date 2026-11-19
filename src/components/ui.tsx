@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {ArrowRight,Check} from 'lucide-react'
 import type {Service} from '../data/content'
 import type {LucideIcon} from 'lucide-react'
-const SITE=(import.meta.env.VITE_SITE_URL as string)||'https://YOUR-DOMAIN'
+const SITE=(import.meta.env.VITE_SITE_URL as string)||'https://nexora-website-52g.pages.dev'
 export function Seo({title,desc,path}:{title:string;desc:string;path:string}){
  useEffect(()=>{
   document.title=`${title} | Nexora Smart Services Ltd`
