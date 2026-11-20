@@ -8,8 +8,15 @@ export const About=()=><><Seo path="/about" title="About Us" desc="Nexora Smart 
 <Section><p className="max-w-3xl text-slate">Nexora Smart Services Ltd is a Cameroon-based technology and business solutions company committed to helping businesses, organisations and entrepreneurs improve their operations through innovative software development, IT solutions, data management, business automation, digital transformation and professional consultancy. Our headquarters is in Buea, with an active branch in Yaoundé.</p>
 <div className="mt-10 grid gap-5 md:grid-cols-2"><div className="card"><h2 className="text-xl font-bold">Mission</h2><p className="mt-2 text-slate">To provide accessible, innovative and reliable technology and consultancy solutions that empower businesses and institutions to improve productivity, efficiency and sustainable growth.</p></div><div className="card"><h2 className="text-xl font-bold">Vision</h2><p className="mt-2 text-slate">To become a trusted technology and business solutions provider in Cameroon and across Africa.</p></div></div>
 <h2 className="mt-12 text-2xl font-bold">Core Values</h2><ul className="mt-4 flex flex-wrap gap-3">{values.map(v=><li key={v} className="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-navy">{v}</li>)}</ul></Section><CTA/></>
-export const Services=()=><><Seo path="/services" title="Services" desc="Data management, software development, inventory systems, automation, training, IT support and consultancy services in Cameroon."/>
-<PageHero t="Our Services" d="Practical technology and consultancy services for businesses and organisations."/><Section><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{services.map(s=><ServiceCard key={s.slug} s={s}/>)}</div></Section><CTA/></>
+
+export const Services=()=><><Seo path="/services" title="Our Services" desc="Explore Nexora Smart Services Ltd's software development, IT solutions, data management, business automation, training and consultancy services in Cameroon."/>
+<PageHero t="Our Services" d="Practical technology, software and professional consultancy solutions designed to help businesses and organisations work smarter, operate efficiently and grow."/>
+<Section>
+<Heading k="How We Help" t="Solutions Designed Around Your Business" d="Every organisation faces different challenges. Nexora combines technology expertise and business consultancy to deliver practical solutions that address operational needs, improve efficiency and support informed decision-making."/>
+<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">{services.map(s=><ServiceCard key={s.slug} s={s}/>)}</div>
+</Section>
+<CTA/></>
+
 export function ServiceDetail(){const {slug}=useParams();const s=services.find(x=>x.slug===slug)
  if(!s)return <Section><h1 className="text-3xl font-bold">Service not found</h1><Link to="/services" className="btn-p mt-6">View all services</Link></Section>
  return<><Seo path={`/services/${s.slug}`} title={s.title} desc={s.desc}/><PageHero t={s.title} d={s.desc}/>
