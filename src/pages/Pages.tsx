@@ -22,8 +22,13 @@ export function ServiceDetail(){const {slug}=useParams();const s=services.find(x
  return<><Seo path={`/services/${s.slug}`} title={s.title} desc={s.desc}/><PageHero t={s.title} d={s.desc}/>
  <Section><div className="grid gap-5 md:grid-cols-3">{[['Problem addressed',s.problem],['Customer benefit',s.benefit],['Relevant industries',s.industries]].map(([a,b])=><div key={a} className="card"><h2 className="font-bold">{a}</h2><p className="mt-2 text-sm text-slate">{b}</p></div>)}</div>
  <Link to={`/contact?service=${encodeURIComponent(s.title)}`} className="btn-p mt-8">Enquire about this service</Link></Section><CTA/></>}
-export const Software=()=><><Seo path="/software-solutions" title="Software Solutions" desc="Nexora Stay hotel management, Nexora POS and Nexora Inventory: proprietary software for businesses in Cameroon."/>
-<PageHero t="Software Solutions" d="Nexora Stay, Nexora POS and Nexora Inventory. Dashboard visuals are illustrative until real screenshots are supplied."/><Section><div className="grid gap-6 lg:grid-cols-3">{products.map(p=><ProductCard key={p.slug} p={p}/>)}</div></Section><CTA/></>
+export const Software=()=><><Seo path="/software-solutions" title="Software Solutions" desc="Discover Nexora Stay hotel management software and Nexora POS business management software with sales and inventory management features for businesses in Cameroon."/>
+<PageHero t="Our Software Solutions" d="Explore Nexora Stay and Nexora POS, practical software applications designed to support hotel operations, sales, stock control and day-to-day business management."/>
+<Section>
+<Heading k="Nexora Software" t="Two Applications. Practical Business Solutions." d="Nexora develops software applications to help organisations manage day-to-day operations more efficiently. Explore each solution and request a demonstration to see its features."/>
+<div className="grid gap-6 lg:grid-cols-2">{products.map(p=><ProductCard key={p.slug} p={p}/>)}</div>
+</Section>
+<CTA/></>
 export const Industries=()=><><Seo path="/industries" title="Industries We Serve" desc="Technology solutions for hotels, retail, wholesale, clinics, education, NGOs, SMEs and organisations in Cameroon."/>
 <PageHero t="Industries We Serve" d="The technology problems we help each sector solve."/><Section><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{industries.map(i=><IndustryCard key={i.title} i={i}/>)}</div></Section><CTA/></>
 export function Portfolio(){const [c,setC]=useState('All');const list=projects.filter(p=>c==='All'||p.category===c)
