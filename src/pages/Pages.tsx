@@ -64,9 +64,72 @@ return<>
 </Section>
 <CTA/>
 </>}
-export const Blog=()=><><Seo path="/blog" title="Insights" desc="Insights on technology, software, data management and digital transformation from Nexora."/><PageHero t="Insights" d="Articles on technology and business. Entries below are sample content."/>
-<Section><div className="mb-8 flex flex-wrap gap-2">{blogCategories.map(k=><span key={k} className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy">{k}</span>)}</div><div className="grid gap-5 md:grid-cols-3">{posts.map(p=><article key={p.title} className="card"><p className="text-xs font-semibold uppercase text-sky-dark">{p.category} · Sample content</p><h2 className="mt-1 text-lg font-bold">{p.title}</h2><p className="mt-2 text-sm text-slate">{p.excerpt}</p></article>)}</div></Section></>
-const Legal=({path,t,body}:{path:string;t:string;body:string[]})=><><Seo path={path} title={t} desc={`${t} for Nexora Smart Services Ltd.`}/><PageHero t={t} d="Draft text. Have it reviewed by a legal professional before relying on it."/><Section><div className="max-w-3xl space-y-4 text-slate">{body.map(b=><p key={b}>{b}</p>)}</div></Section></>
+
+export const Blog=()=><>
+<Seo
+  path="/blog"
+  title="Insights"
+  desc="Practical insights on technology, software solutions, data management, inventory management and digital transformation from Nexora Smart Services Ltd."
+/>
+
+<PageHero
+  t="Insights & Business Resources"
+  d="Explore practical articles, technology insights and business guidance to help organisations improve operations, make better decisions and grow."
+/>
+
+<Section>
+  <Heading
+    k="Knowledge & Insights"
+    t="Ideas That Help Businesses Move Forward"
+    d="Discover useful information on software solutions, inventory management, digital transformation and data management."
+  />
+
+  <div className="mb-8 flex flex-wrap gap-2">
+    {blogCategories.map(k=>(
+      <span
+        key={k}
+        className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy"
+      >
+        {k}
+      </span>
+    ))}
+  </div>
+
+  <div className="space-y-8">
+    {posts.map(p=>(
+      <article key={p.title} className="card">
+        <p className="text-xs font-semibold uppercase text-sky-dark">
+          {p.category}
+        </p>
+
+        <h2 className="mt-2 text-2xl font-bold text-navy">
+          {p.title}
+        </h2>
+
+        <p className="mt-3 mb-5 text-sm font-medium text-slate">
+          {p.excerpt}
+        </p>
+
+        <div className="max-w-4xl space-y-4 text-slate leading-7">
+          {p.content.map((paragraph,index)=>(
+            <p key={index}>{paragraph}</p>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</Section>
+</>
+const Legal=({path,t,body}:{path:string;t:string;body:string[]})=><>
+  <Seo path={path} title={t} desc={`${t} for Nexora Smart Services Ltd.`}/>
+  <PageHero t={t} d="Draft text. Have it reviewed by a legal professional before relying on it."/>
+  <Section>
+    <div className="max-w-3xl space-y-4 text-slate">
+      {body.map(b=><p key={b}>{b}</p>)}
+    </div>
+  </Section>
+</>
+
 export const Privacy=()=><Legal path="/privacy-policy" t="Privacy Policy" body={['Nexora Smart Services Ltd collects only the information you submit through our contact form or by WhatsApp or phone, such as your name, organisation, email, telephone number and message.','We use this information to respond to your enquiry and to provide our services. We do not sell your personal information.','To ask about or request removal of your information, contact us using the details on our Contact page.']}/>
 export const Terms=()=><Legal path="/terms" t="Terms & Conditions" body={['By using this website you agree to use it lawfully and not to interfere with its operation.','Information on this website is provided for general information. Service scope, pricing and delivery are agreed in writing with each client.','Software dashboard visuals on this website are illustrative and may not represent final application screens.']}/>
 export {Mock}

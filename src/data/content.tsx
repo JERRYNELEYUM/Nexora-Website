@@ -52,7 +52,49 @@ export const projects:{title:string;category:string;desc:string;url?:string}[]=[
 {title:'Hotel Omnisport',category:'Website Development',desc:'Website development and digital presence for Hotel Omnisport.',url:'https://hotelomnisport.com/'}]
 // Add new articles here. Sample content is clearly labelled.
 export const posts=[
-{title:'Why small businesses need inventory tracking',category:'Inventory Management',excerpt:'A short introduction to the benefits of tracking stock digitally.'},
-{title:'First steps in digital transformation',category:'Digital Transformation',excerpt:'Where to begin when moving manual processes to digital tools.'},
-{title:'Clean data, better decisions',category:'Data Management',excerpt:'Why data quality matters before reporting and analytics.'}]
+{
+title:'Why Small Businesses Need Inventory Tracking',
+category:'Inventory Management',
+excerpt:'Discover how proper inventory tracking helps small businesses reduce stock losses, control purchasing and make better decisions.',
+content:[
+'Inventory is one of the most important assets of many small businesses. Whether you operate a supermarket, pharmacy, wholesale shop or retail store, knowing what you have in stock is essential to running your business effectively.',
+'Without proper inventory tracking, business owners may struggle with missing products, inaccurate stock counts, unnecessary purchases and unexpected stock shortages. These problems can affect customer satisfaction, cash flow and profitability.',
+'Start by creating a clear record of every product. Include its name, product code, quantity available, purchase price, selling price and supplier information. Update the records whenever goods are received, sold, returned or damaged.',
+'Conduct regular stock counts and compare the physical quantities with your records. Investigate differences instead of simply adjusting the figures. This can help identify recording mistakes, damaged goods, theft or other stock management problems.',
+'Pay attention to fast-moving and slow-moving products. Fast-moving items may require more frequent replenishment, while slow-moving products can tie up money that could be used elsewhere in the business.',
+'Digital inventory management tools can make these processes easier by bringing product records, sales and stock movements together. For businesses managing many products or multiple locations, a suitable point-of-sale system with inventory management features can improve visibility and organisation.',
+'Good inventory management is not only about counting products. It is about knowing what your business owns, understanding how products move and using accurate information to make purchasing and sales decisions.'
+]
+},
+{
+title:'First Steps in Digital Transformation',
+category:'Digital Transformation',
+excerpt:'A practical guide to identifying manual business processes, choosing appropriate digital tools and introducing technology gradually.',
+content:[
+'Digital transformation is the process of using digital technology to improve how an organisation operates, serves customers and manages information. It is not simply about buying computers or installing software. It begins with understanding business challenges and identifying where technology can make a meaningful difference.',
+'Many small businesses and organisations still depend on paper records, spreadsheets, manual calculations and disconnected processes. These methods may work initially, but as operations grow, they can become difficult to manage and increase the risk of errors, delays and duplicated work.',
+'The first step is to review your current operations. Identify activities that consume significant time, require repeated data entry or make it difficult to access reliable information. Examples may include recording sales, managing stock, processing bookings, preparing reports or maintaining customer records.',
+'Next, prioritise the problems that have the greatest effect on your business. You do not need to digitise everything at once. Start with one important process where an improvement can be clearly observed and evaluated.',
+'Choose technology that matches your actual requirements. Consider ease of use, cost, security, reliability, staff training and the ability to support future growth. A small business may benefit from a suitable point-of-sale or accounting system, while a hotel may need a booking and management application.',
+'Successful digital transformation also depends on people. Explain why a new system is being introduced, involve the employees who will use it and provide practical training. Allow time for users to become comfortable with the new process and collect feedback before expanding its use.',
+'Finally, review the results. Check whether the new process saves time, improves record accuracy, reduces unnecessary work or makes information easier to access. Use these observations to decide what to improve next.',
+'Digital transformation is a continuous journey. Starting with a clearly defined problem, choosing appropriate tools and supporting the people who use them can help organisations adopt technology in a practical and sustainable way.'
+]
+},
+{
+title:'Clean Data, Better Decisions',
+category:'Data Management',
+excerpt:'Understand why accurate, complete and consistent data is essential for reporting, planning and informed business decisions.',
+content:[
+'Businesses and organisations make decisions every day using information about customers, sales, finances, inventory, employees and operations. The quality of those decisions depends heavily on the quality of the information available.',
+'Poor-quality data can contain missing values, duplicate records, spelling inconsistencies, incorrect figures or outdated information. When these problems are not addressed, reports may become misleading and managers may make decisions based on inaccurate information.',
+'Data cleaning is the process of identifying and correcting problems in a dataset. It may involve removing duplicate records, standardising dates and names, checking unusual values, correcting formatting issues and handling missing information appropriately.',
+'For example, a business that records the same customer under several different spellings may struggle to understand how many customers it actually serves. Similarly, inconsistent product names can make sales and inventory reports unreliable.',
+'Data validation should also be part of the process. Establish clear rules for information entered into business systems. These may include required fields, valid date formats, acceptable number ranges and consistent product or customer codes. Good validation reduces errors before they spread into reports.',
+'Organisations should maintain clear procedures for updating, reviewing and protecting their data. Staff should understand who is responsible for entering information, who can make changes and how important records are backed up and secured.',
+'Once information is sufficiently accurate and organised, it becomes more useful for analysis. Businesses can examine sales patterns, monitor operational performance, identify changes over time and prepare reports that support planning.',
+'Clean data does not automatically guarantee good decisions, but it provides a more reliable foundation for analysis. Investing in data quality helps organisations understand their operations and make decisions with greater confidence.'
+]
+}
+];
 export const blogCategories=['Technology and Business','Software Solutions','Digital Transformation','Inventory Management','Data Management','Business Automation']
