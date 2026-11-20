@@ -199,7 +199,12 @@ export const Blog=()=><>
 </>
 const Legal=({path,t,body}:{path:string;t:string;body:string[]})=><>
   <Seo path={path} title={t} desc={`${t} for Nexora Smart Services Ltd.`}/>
-  <PageHero t={t} d="Draft text. Have it reviewed by a legal professional before relying on it."/>
+  <PageHero
+  t={t}
+  d={path === "/privacy-policy"
+    ? "Learn how Nexora Smart Services Ltd collects, uses and protects information shared through our website and communication channels."
+    : "Please read these terms carefully to understand the conditions governing your use of the Nexora Smart Services Ltd website."}
+/>
   <Section>
     <div className="max-w-3xl space-y-4 text-slate">
       {body.map(b=><p key={b}>{b}</p>)}
@@ -207,6 +212,56 @@ const Legal=({path,t,body}:{path:string;t:string;body:string[]})=><>
   </Section>
 </>
 
-export const Privacy=()=><Legal path="/privacy-policy" t="Privacy Policy" body={['Nexora Smart Services Ltd collects only the information you submit through our contact form or by WhatsApp or phone, such as your name, organisation, email, telephone number and message.','We use this information to respond to your enquiry and to provide our services. We do not sell your personal information.','To ask about or request removal of your information, contact us using the details on our Contact page.']}/>
-export const Terms=()=><Legal path="/terms" t="Terms & Conditions" body={['By using this website you agree to use it lawfully and not to interfere with its operation.','Information on this website is provided for general information. Service scope, pricing and delivery are agreed in writing with each client.','Software dashboard visuals on this website are illustrative and may not represent final application screens.']}/>
+export const Privacy = () => (
+  <Legal
+    path="/privacy-policy"
+    t="Privacy Policy"
+    body={[
+      "Nexora Smart Services Ltd respects the privacy of visitors to our website. This policy explains what personal information we collect, how we use it and how you can contact us about your information.",
+
+      "Information We Collect: When you submit an enquiry through our website contact form, we may collect your full name, business or organisation name, email address, telephone number, selected service and message. If you contact us through WhatsApp or telephone, we may also receive the information you choose to share during that communication.",
+
+      "How We Use Your Information: We use the information you provide to respond to enquiries, discuss requested services, arrange consultations or demonstrations, communicate with prospective and existing clients, and provide relevant business support.",
+
+      "Email Delivery: Website contact form submissions are processed through EmailJS, a third-party email delivery service, to deliver enquiries to our official company email address. Information submitted through the form may therefore be processed by EmailJS in accordance with its own privacy and data-handling practices.",
+
+      "Sharing of Information: We do not sell personal information. We do not share submitted enquiry information with unrelated third parties for their own marketing purposes. Information may be processed by service providers where necessary to operate our communication channels or respond to your enquiry.",
+
+      "Data Retention: We retain enquiry information only for as long as reasonably necessary to respond to enquiries, maintain relevant business communications, fulfil legitimate business purposes or meet applicable legal obligations.",
+
+      "Your Privacy Requests: You may contact us to ask about the personal information you have submitted, request corrections or request deletion where applicable. Some information may need to be retained where required by law or for legitimate business purposes.",
+
+      "Contact Us: For privacy-related questions or requests, contact Nexora Smart Services Ltd at nexorasmartservices@gmail.com or use the contact details provided on our Contact page.",
+
+      "Policy Updates: We may update this Privacy Policy when our website, services or information-handling practices change. Any revised version will be published on this page."
+    ]}
+  />
+)
+export const Terms = () => (
+  <Legal
+    path="/terms"
+    t="Terms & Conditions"
+    body={[
+      "Welcome to the website of Nexora Smart Services Ltd. By accessing or using this website, you agree to these Terms & Conditions. If you do not agree, please discontinue use of the website.",
+
+      "Website Use: You agree to use this website lawfully and responsibly. You must not attempt to disrupt its operation, gain unauthorised access to its systems or misuse its content, forms or communication channels.",
+
+      "Website Information: The information on this website is provided for general information about Nexora Smart Services Ltd, its services and software solutions. We make reasonable efforts to keep the information accurate and current but do not guarantee that all information is complete or free from errors.",
+
+      "Services and Agreements: Information about our services, products and solutions does not constitute a binding offer. Specific service scope, features, pricing, timelines, payment terms and delivery obligations will be agreed separately in writing between Nexora Smart Services Ltd and the relevant client.",
+
+      "Software Products: Nexora Stay and Nexora POS are software solutions developed by Nexora Smart Services Ltd. Product descriptions and screenshots are provided to explain their general capabilities and interfaces. Actual features, configurations and availability may vary depending on the agreed implementation and client requirements.",
+
+      "Intellectual Property: Unless otherwise stated, website content, branding, logos, graphics, written materials and original software information are owned by or used with permission by Nexora Smart Services Ltd. They may not be copied, reproduced, modified or commercially distributed without prior written permission.",
+
+      "Third-Party Services and Links: This website may provide links to third-party websites or use external communication services such as WhatsApp and email delivery providers. Nexora Smart Services Ltd is not responsible for the content, availability or privacy practices of external services.",
+
+      "Limitation of Liability: To the extent permitted by applicable law, Nexora Smart Services Ltd shall not be liable for losses arising solely from reliance on general website information, temporary website interruptions or the use of third-party websites and services.",
+
+      "Changes to These Terms: We may update these Terms & Conditions when necessary. Updated versions will be published on this page, and continued use of the website after publication constitutes acceptance of the revised terms.",
+
+      "Contact: For questions about these Terms & Conditions, contact Nexora Smart Services Ltd through the Contact page or email nexorasmartservices@gmail.com."
+    ]}
+  />
+)
 export {Mock}
