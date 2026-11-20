@@ -29,8 +29,15 @@ export const Software=()=><><Seo path="/software-solutions" title="Software Solu
 <div className="grid gap-6 lg:grid-cols-2">{products.map(p=><ProductCard key={p.slug} p={p}/>)}</div>
 </Section>
 <CTA/></>
-export const Industries=()=><><Seo path="/industries" title="Industries We Serve" desc="Technology solutions for hotels, retail, wholesale, clinics, education, NGOs, SMEs and organisations in Cameroon."/>
-<PageHero t="Industries We Serve" d="The technology problems we help each sector solve."/><Section><div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{industries.map(i=><IndustryCard key={i.title} i={i}/>)}</div></Section><CTA/></>
+export const Industries=()=><><Seo path="/industries" title="Industries We Serve" desc="Nexora Smart Services Ltd provides software, IT, data management and business consultancy solutions for hotels, retailers, wholesalers, clinics, schools, NGOs, SMEs and organisations in Cameroon."/>
+<PageHero t="Industries We Serve" d="Practical technology and business solutions for organisations across different sectors in Cameroon."/>
+<Section>
+<Heading k="Who We Support" t="Technology That Works for Your Industry" d="Every sector has unique operational challenges. Nexora combines software solutions, data management, IT expertise and professional consultancy to help organisations improve their processes, manage information and operate more efficiently."/>
+<div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+{industries.map(i=><IndustryCard key={i.title} i={i}/>)}
+</div>
+</Section>
+<CTA/></>
 export function Portfolio(){const [c,setC]=useState('All');const list=projects.filter(p=>c==='All'||p.category===c)
  return<><Seo path="/portfolio" title="Projects & Portfolio" desc="Selected Nexora projects, including website development for Hotel Omnisport."/><PageHero t="Projects & Portfolio" d="Add new projects in src/data/content.tsx."/>
  <Section><div className="mb-8 flex flex-wrap gap-2">{['All',...projectCategories].map(k=><button key={k} onClick={()=>setC(k)} aria-pressed={c===k} className={`rounded-full px-4 py-2 text-sm font-semibold ${c===k?'bg-navy text-white':'bg-mist text-navy'}`}>{k}</button>)}</div>
