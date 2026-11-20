@@ -38,10 +38,32 @@ export const Industries=()=><><Seo path="/industries" title="Industries We Serve
 </div>
 </Section>
 <CTA/></>
-export function Portfolio(){const [c,setC]=useState('All');const list=projects.filter(p=>c==='All'||p.category===c)
- return<><Seo path="/portfolio" title="Projects & Portfolio" desc="Selected Nexora projects, including website development for Hotel Omnisport."/><PageHero t="Projects & Portfolio" d="Add new projects in src/data/content.tsx."/>
- <Section><div className="mb-8 flex flex-wrap gap-2">{['All',...projectCategories].map(k=><button key={k} onClick={()=>setC(k)} aria-pressed={c===k} className={`rounded-full px-4 py-2 text-sm font-semibold ${c===k?'bg-navy text-white':'bg-mist text-navy'}`}>{k}</button>)}</div>
- {list.length?<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">{list.map(p=><article key={p.title} className="card"><p className="text-xs font-semibold uppercase text-sky-dark">{p.category}</p><h2 className="mt-1 text-xl font-bold">{p.title}</h2><p className="mt-2 text-sm text-slate">{p.desc}</p>{p.url&&<a href={p.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-sky-dark">Visit website <ExternalLink className="h-4 w-4"/></a>}</article>)}</div>:<p className="text-slate">No projects in this category yet.</p>}</Section><CTA/></>}
+export function Portfolio(){
+const [c,setC]=useState('All');
+const list=projects.filter(p=>c==='All'||p.category===c);
+
+return<>
+<Seo path="/portfolio" title="Our Projects & Portfolio" desc="Explore selected projects by Nexora Smart Services Ltd, including website development and digital solutions for businesses in Cameroon."/>
+<PageHero t="Our Projects & Portfolio" d="Discover selected projects that demonstrate how Nexora applies technology and digital solutions to real business needs."/>
+
+<Section>
+<Heading k="Our Work" t="Practical Solutions. Real Projects." d="We work with businesses and organisations to develop practical digital solutions that support their operations. Explore selected projects delivered by Nexora Smart Services Ltd."/>
+
+<div className="mb-8 flex flex-wrap gap-2">
+{['All',...projectCategories].map(k=><button key={k} onClick={()=>setC(k)} aria-pressed={c===k} className={`rounded-full px-4 py-2 text-sm font-semibold ${c===k?'bg-navy text-white':'bg-mist text-navy'}`}>{k}</button>)}
+</div>
+
+{list.length?<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+{list.map(p=><article key={p.title} className="card">
+<p className="text-xs font-semibold uppercase text-sky-dark">{p.category}</p>
+<h2 className="mt-1 text-xl font-bold">{p.title}</h2>
+<p className="mt-2 text-sm text-slate">{p.desc}</p>
+{p.url&&<a href={p.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-sky-dark">Visit website <ExternalLink className="h-4 w-4"/></a>}
+</article>)}
+</div>:<p className="text-slate">No projects in this category yet.</p>}
+</Section>
+<CTA/>
+</>}
 export const Blog=()=><><Seo path="/blog" title="Insights" desc="Insights on technology, software, data management and digital transformation from Nexora."/><PageHero t="Insights" d="Articles on technology and business. Entries below are sample content."/>
 <Section><div className="mb-8 flex flex-wrap gap-2">{blogCategories.map(k=><span key={k} className="rounded-full bg-mist px-3 py-1 text-xs font-semibold text-navy">{k}</span>)}</div><div className="grid gap-5 md:grid-cols-3">{posts.map(p=><article key={p.title} className="card"><p className="text-xs font-semibold uppercase text-sky-dark">{p.category} · Sample content</p><h2 className="mt-1 text-lg font-bold">{p.title}</h2><p className="mt-2 text-sm text-slate">{p.excerpt}</p></article>)}</div></Section></>
 const Legal=({path,t,body}:{path:string;t:string;body:string[]})=><><Seo path={path} title={t} desc={`${t} for Nexora Smart Services Ltd.`}/><PageHero t={t} d="Draft text. Have it reviewed by a legal professional before relying on it."/><Section><div className="max-w-3xl space-y-4 text-slate">{body.map(b=><p key={b}>{b}</p>)}</div></Section></>
