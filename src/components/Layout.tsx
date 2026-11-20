@@ -15,22 +15,19 @@ const nav = [
 ]
 
 
+
 export const Logo = ({ light }: { light?: boolean }) => (
   <Link
     to="/"
-    className="flex items-center gap-2"
+    className="flex shrink-0 items-center"
     aria-label="Nexora Smart Services Ltd home"
   >
-    <img
-      src="/images/nexora-logo.png"
-      alt="Nexora Smart Services Ltd"
-      className="h-14 w-auto object-contain"
-    />
-    <span className={`text-lg font-extrabold ${light ? 'text-white' : 'text-navy'}`}>
-      NEXORA
-      <span className="ml-1 text-xs font-semibold text-sky">
-        SMART SERVICES
-      </span>
+    <span className={light ? 'rounded-md bg-white px-2 py-1' : ''}>
+      <img
+        src="/images/nexora-logo.png"
+        alt="Nexora Smart Services Ltd"
+        className="block h-16 w-auto max-w-[224px] object-contain"
+      />
     </span>
   </Link>
 )
