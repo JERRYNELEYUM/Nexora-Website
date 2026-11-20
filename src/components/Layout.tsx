@@ -14,15 +14,18 @@ const nav = [
   ['/contact', 'Contact'],
 ]
 
+
 export const Logo = ({ light }: { light?: boolean }) => (
   <Link
     to="/"
     className="flex items-center gap-2"
     aria-label="Nexora Smart Services Ltd home"
   >
-    <span className="grid h-9 w-9 place-items-center rounded-lg bg-navy font-extrabold text-sky">
-      N
-    </span>
+    <img
+      src="/images/nexora-logo.png"
+      alt="Nexora Smart Services Ltd"
+      className="h-14 w-auto object-contain"
+    />
     <span className={`text-lg font-extrabold ${light ? 'text-white' : 'text-navy'}`}>
       NEXORA
       <span className="ml-1 text-xs font-semibold text-sky">
@@ -31,7 +34,6 @@ export const Logo = ({ light }: { light?: boolean }) => (
     </span>
   </Link>
 )
-
 export default function Layout() {
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
