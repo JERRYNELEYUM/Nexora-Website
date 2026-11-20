@@ -3,11 +3,88 @@ import {Link,useParams} from 'react-router-dom'
 import {Seo,Section,Heading,PageHero,Mock,ServiceCard,ProductCard,IndustryCard,CTA} from '../components/ui'
 import {services,products,industries,values,projects,projectCategories,posts,blogCategories} from '../data/content'
 import {ExternalLink} from 'lucide-react'
-export const About=()=><><Seo path="/about" title="About Us" desc="Nexora Smart Services Ltd is an independent technology and business consultancy company based in Buea, Cameroon, with a branch in Yaoundé."/>
-<PageHero t="About Nexora Smart Services Ltd" d="An independent technology and business consultancy company based in Cameroon."/>
-<Section><p className="max-w-3xl text-slate">Nexora Smart Services Ltd is a Cameroon-based technology and business solutions company committed to helping businesses, organisations and entrepreneurs improve their operations through innovative software development, IT solutions, data management, business automation, digital transformation and professional consultancy. Our headquarters is in Buea, with an active branch in Yaoundé.</p>
-<div className="mt-10 grid gap-5 md:grid-cols-2"><div className="card"><h2 className="text-xl font-bold">Mission</h2><p className="mt-2 text-slate">To provide accessible, innovative and reliable technology and consultancy solutions that empower businesses and institutions to improve productivity, efficiency and sustainable growth.</p></div><div className="card"><h2 className="text-xl font-bold">Vision</h2><p className="mt-2 text-slate">To become a trusted technology and business solutions provider in Cameroon and across Africa.</p></div></div>
-<h2 className="mt-12 text-2xl font-bold">Core Values</h2><ul className="mt-4 flex flex-wrap gap-3">{values.map(v=><li key={v} className="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-navy">{v}</li>)}</ul></Section><CTA/></>
+
+export const About=()=><>
+<Seo
+  path="/about"
+  title="About Nexora Smart Services Ltd"
+  desc="Discover Nexora Smart Services Ltd, an independent technology and business consultancy company headquartered in Buea, Cameroon, with a branch in Yaoundé."
+/>
+
+<PageHero
+  t="About Nexora Smart Services Ltd"
+  d="Empowering businesses and organisations through practical technology, innovative software and professional business solutions."
+/>
+
+<Section>
+  <Heading
+    k="Who We Are"
+    t="Technology and Business Solutions That Make a Difference"
+    d="Nexora Smart Services Ltd is an independent technology and business consultancy company committed to helping businesses, organisations and entrepreneurs work smarter, improve efficiency and achieve sustainable growth."
+  />
+
+  <div className="max-w-4xl space-y-4 text-slate leading-7">
+    <p>
+      Headquartered in Buea, Cameroon, with an active branch in Yaoundé, Nexora delivers practical solutions that combine technology expertise, business understanding and professional consultancy.
+    </p>
+
+    <p>
+      Our work spans custom software development, hotel management and booking solutions, point-of-sale and inventory management, data management and analytics, IT solutions, digital transformation, automation, training and business consultancy.
+    </p>
+
+    <p>
+      We serve businesses and organisations across different sectors, including hospitality, retail, wholesale, healthcare, education, NGOs and small and medium-sized enterprises.
+    </p>
+  </div>
+
+  <div className="mt-10 grid gap-5 md:grid-cols-2">
+    <div className="card">
+      <h2 className="text-xl font-bold">Our Mission</h2>
+      <p className="mt-2 text-slate leading-7">
+        To provide accessible, innovative and reliable technology and consultancy solutions that empower businesses and institutions to improve productivity, efficiency and sustainable growth.
+      </p>
+    </div>
+
+    <div className="card">
+      <h2 className="text-xl font-bold">Our Vision</h2>
+      <p className="mt-2 text-slate leading-7">
+        To become a trusted technology and business solutions provider in Cameroon and across Africa.
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-12">
+    <Heading
+      k="How We Work"
+      t="Practical Solutions Built Around Your Needs"
+      d="We believe effective technology should solve real business problems. We take time to understand operational challenges and identify suitable solutions, whether through software, improved data processes, IT support, automation or professional consultancy."
+    />
+  </div>
+
+  <h2 className="mt-12 text-2xl font-bold">Our Core Values</h2>
+
+  <ul className="mt-4 flex flex-wrap gap-3">
+    {values.map(v=>(
+      <li
+        key={v}
+        className="rounded-full bg-mist px-4 py-2 text-sm font-semibold text-navy"
+      >
+        {v}
+      </li>
+    ))}
+  </ul>
+
+  <div className="card mt-12">
+    <h2 className="text-xl font-bold">Our Presence in Cameroon</h2>
+    <p className="mt-2 text-slate leading-7">
+      With our headquarters in Buea and an active branch in Yaoundé, Nexora Smart Services Ltd is positioned to support businesses and organisations in Cameroon through technology and professional consultancy services.
+    </p>
+  </div>
+</Section>
+
+<CTA/>
+</>
+
 
 export const Services=()=><><Seo path="/services" title="Our Services" desc="Explore Nexora Smart Services Ltd's software development, IT solutions, data management, business automation, training and consultancy services in Cameroon."/>
 <PageHero t="Our Services" d="Practical technology, software and professional consultancy solutions designed to help businesses and organisations work smarter, operate efficiently and grow."/>
